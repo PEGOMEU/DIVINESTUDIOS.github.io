@@ -1,0 +1,90 @@
+body {
+  font-family: Arial;
+  margin:0;
+  background:#fff;
+  color:#333;
+}
+
+header {
+  background: linear-gradient(135deg,#d63384,#000);
+  color:white;
+  padding:60px;
+  text-align:center;
+}
+
+header .btn {
+  background:white;
+  color:#d63384;
+  padding:12px 20px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.servicos {
+  padding:40px;
+  text-align:center;
+}
+
+.cards div {
+  display:inline-block;
+  background:#f8f8f8;
+  padding:20px;
+  margin:10px;
+  border-radius:12px;
+  box-shadow:0 0 10px #ddd;
+  width:150px;
+}
+
+.sobre {
+  padding:40px;
+  background:#111;
+  color:white;
+  text-align:center;
+}
+
+footer {
+  background:#000;
+  color:white;
+  padding:10px;
+  text-align:center;
+}
+
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  color:white;
+  font-size:30px;
+  padding:15px;
+  border-radius:50%;
+  text-decoration:none;
+}
+
+/* PAINEL ADMIN */
+.painel {
+  background:#f8f8f8;
+  padding:20px;
+}
+
+.container {
+  max-width:600px;
+  background:white;
+  padding:20px;
+  margin:auto;
+  border-radius:10px;
+  box-shadow:0 0 10px #ccc;
+}
+
+input, select, textarea, button {
+  width:100%;
+  padding:10px;
+  margin:5px 0;
+}
+button {
+  background:#d63384;
+  color:white;
+  border:none;
+  border-radius:5px;
+}
