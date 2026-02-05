@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Painel Divine Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="painel">
+
+<div class="container">
+<h2>📊 Atendimentos Registrados</h2>
+
+<table border="1" width="100%" id="tabela"></table>
+
+<button onclick="limpar()">Apagar Tudo</button>
+</div>
+
+<script>
+let lista = JSON.parse(localStorage.getItem("atendimentos")) || [];
+let tabela = document.getElementById("tabela");
+
+let html = "<tr><th>Cliente</th><th>Serviço</th><th>Valor</th><th>Funcionária</th><th>Data</th></tr>";
+
+lista.forEach(a => {
+  html += `<tr>
+    <td>${a.nome}</td>
+    <td>${a.servico}</td>
+    <td>R$ ${a.valor}</td>
+    <td>${a.funcionaria}</td>
+    <td>${a.data}</td>
+  </tr>`;
+});
+
+tabela.innerHTML = html;
+
+function limpar(){
+  if(confirm("Tem certeza?")){
+    localStorage.clear();
+    location.reload();
+  }
+}
+</script>
+
+</body>
+</html>
