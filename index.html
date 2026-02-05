@@ -1,43 +1,19 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prime Beauty Studio</title>
-<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<header>
-  <h1>Prime Beauty Studio</h1>
-  <p>Centro de Beleza • Betim MG</p>
-  <a href="https://wa.me/55SEUNUMERO" class="btn">Agendar no WhatsApp</a>
-</header>
-
 <section class="servicos">
   <h2>Nossos Serviços</h2>
   <div class="cards">
-    <div>Cabelo</div>
-    <div>Manicure</div>
-    <div>Cílios</div>
-    <div>Depilação</div>
-    <div>Massagem</div>
+    <button onclick="agendar('Cabelo')">Cabelo</button>
+    <button onclick="agendar('Manicure')">Manicure</button>
+    <button onclick="agendar('Cílios')">Cílios</button>
+    <button onclick="agendar('Depilação')">Depilação</button>
+    <button onclick="agendar('Massagem')">Massagem</button>
   </div>
 </section>
 
-<section class="sobre">
-  <h2>Sobre Nós</h2>
-  <p>Beleza, autoestima e atendimento premium no centro de Betim.</p>
-</section>
+<script>
+function agendar(servico){
+  let numero = "55SEUNUMEROAQUI"; 
+  let msg = `Olá, quero agendar ${servico} no Divine Studio`;
+  window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`);
+}
+</script>
 
-<footer>
-  <p>© 2026 Prime Beauty Studio</p>
-  <a href="cadastro.html">Área Administrativa</a>
-</footer>
-
-<!-- Botão WhatsApp flutuante -->
-<a href="https://wa.me/55SEUNUMERO" class="whatsapp">💬</a>
-
-</body>
-</html>
