@@ -3,25 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <title>Cadastro Atendimento</title>
-<style>
-body { font-family:Arial; background:#f8f8f8; padding:20px;}
-.container { max-width:600px; margin:auto; background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px #ccc;}
-h2 { text-align:center; color:#d63384;}
-input, select, textarea { width:100%; padding:10px; margin:5px 0; border-radius:5px; border:1px solid #ccc;}
-button { background:#d63384; color:white; padding:12px; border:none; width:100%; border-radius:5px;}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
+
+<body class="painel">
 
 <div class="container">
 <h2>Registro de Atendimento</h2>
 
-<form>
-<input type="text" placeholder="Nome do Cliente">
+<form id="formulario">
+<input type="text" placeholder="Nome do Cliente" required>
 <input type="text" placeholder="WhatsApp">
 
 <select>
-<option>Serviço Realizado</option>
+<option>Serviço</option>
 <option>Cabelo</option>
 <option>Manicure</option>
 <option>Depilação</option>
@@ -29,10 +24,8 @@ button { background:#d63384; color:white; padding:12px; border:none; width:100%;
 <option>Massagem</option>
 </select>
 
-<textarea placeholder="Observações"></textarea>
-
 <input type="date">
-<input type="text" placeholder="Valor Cobrado">
+<input type="number" placeholder="Valor R$">
 
 <select>
 <option>Pagamento</option>
@@ -42,11 +35,16 @@ button { background:#d63384; color:white; padding:12px; border:none; width:100%;
 </select>
 
 <input type="text" placeholder="Nome da Funcionária">
-<input type="text" placeholder="Comissão (%)">
+<input type="text" placeholder="Comissão %">
 
-<button>Salvar</button>
+<textarea placeholder="Observações"></textarea>
+
+<button type="submit">Salvar Atendimento</button>
 </form>
 
 </div>
+
+<script src="script.js"></script>
 </body>
 </html>
+
